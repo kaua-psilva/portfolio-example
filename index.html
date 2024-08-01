@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mefolio</title>
@@ -11,20 +12,13 @@
   <body>
     <header id="header">
       <h1>Kauã P.Silva</h1>
-      <nav>
-        <a href="#header" target="_self">Inicio</a>
-        <a href="#sobre-mim" target="_top">Sobre mim</a>
-        <a href="#contato">Projetos</a>
-        <a href="#projetos">Serviços</a>
-        <a href="#servicos">Habilidades</a>
-      </nav>
     </header>
     <hr />
     <!-- SOBRE MIM -->
     <main>
       <section id="sobre-mim">
         <div id="sobre-principal">
-            <div id="principal-info" data-aos="fade-down" data-aos-anchor="bottom"">
+            <div id="principal-info" data-aos="fade-down" data-aos-anchor="bottom">
               <div id="curriculo">
                   <h1>Olá, eu sou</h1>
                   <h2>Kauã P.Silva</h2>
@@ -66,7 +60,7 @@
           <div id="instagram-icon">
             <img src="assets/Group 3.png" alt="" />
             <h2>Instagram</h2>
-            <p>kkjkaua_</p>
+            <p>@kkjkaua_</p>
           </div>
           <div id="phone-icon">
             <img src="assets/Group 4.png" alt="" />
@@ -77,8 +71,8 @@
       </section>
       <!-- --------------------------------- -->
       <!-- SEÇÃO DE PROJETOS -->
+      <h1 id="title-project" data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000">Projetos</h1>
       <section id="projetos">
-        <h1 id="title-project" data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000">Projetos</h1>
         <div id="main-content">
           <div class="project-card" data-aos="zoom-in" data-aos-duration="2000">
             <img src="assets/login-page.png" alt="">
@@ -87,16 +81,17 @@
               <p>HTML e CSS</p>
             </div>
             <div class="btn-project-card">
-              <a href="">
                 <button>
-                  <p>Acessar Projeto</p>
+                  <a href="https://kaua-psilva.github.io/Login-Page/" target="_blank">
+                    <p>Acessar Projeto</p>
+                  </a>
                 </button>
               </a>
-              <a href="">
                 <button>
-                  <p>Acessar Repositório</p>
+                  <a href="https://github.com/kaua-psilva/Login-Page" target="_blank">
+                    <p>Acessar Repositório</p>
+                  </a>
                 </button>
-              </a>
             </div>
 
             
@@ -104,66 +99,64 @@
           <div class="project-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500">
             <img src="assets/Captura de tela 2024-07-03 203029.png" alt="">
             <div class="project-description">
-              <h1>Login page</h1>
+              <h1>Blog Codêlandia</h1>
               <p>HTML e CSS</p>
             </div>
             <div class="btn-project-card">
-              <a href="">
                 <button>
-                  <p>Acessar Projeto</p>
+                  <p>Acessar projeto</p>
                 </button>
-              </a>
-              <a href="">
                 <button>
                   <p>Acessar Repositório</p>
                 </button>
-              </a>
           </div>
         </div>
       </section>
       <!-- ---------------------------------- -->
       <!-- SEÇÃO DE SERVICOS -->
       <section id="servicos">
-        <h1 id="title-service" data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000">Serviços</h1>
+        <h1 id="title-service" data-aos="fade-up" data-aos-delay="0" data-aos-duration="4000" data-aos-anchor="center">Serviços</h1>
         <div id="servicos-div" >
-          <div class="servicos-card" data-aos="fade-up" data-aos-duration="2000">
+          <div class="servicos-card" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor="top-center">
             <img src="assets/code.svg" alt="figma-icon">
             <h2>Criação <br> 
               de sites</h2>
           </div>
-          <div class="servicos-card" data-aos="fade-up" data-aos-delay="120" data-aos-duration="5000"><img src="assets/figma.svg" alt="figma-icon">
+          <div class="servicos-card" data-aos="fade-up" data-aos-anchor="top-center" data-aos-delay="40" data-aos-duration="2000"><img src="assets/figma.svg" alt="figma-icon">
           <h2>
             UI / UX <br>
             Design
           </h2>
           </div>
-          <div class="servicos-card" data-aos="fade-up" data-aos-delay="120" data-aos-duration="8000">
+          <div class="servicos-card" data-aos="fade-up" data-aos-anchor="top-center" data-aos-delay="60" data-aos-duration="1000">
             <img src="assets/smartphone.svg" alt="smartphone-icon">
             <h2>
               Sites <br> 
-responsivos
+              responsivos
             </h2>
           </div>
         </div>
       </section>
       <section id="habilidades">
-        <h1 data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000">Habilidades</h1>
+        <h1 data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000" data-aos-anchor="top-center" data-aos-offset="200">Habilidades</h1>
         <div id="habilidades-card">
-          <div class="habilidades"><img src="assets/icomoon-free_html-five.svg" alt="" data-aos="fade-up" data-aos-delay="60" data-aos-duration="4000"></div>
+          <div class="habilidades"><img src="assets/icomoon-free_html-five.svg" alt="" data-aos="fade-up" data-aos-delay="60" data-aos-duration="4000" data-aos-anchor="top-center"></div>
           <div class="habilidades">
-            <img src="assets/fontisto_css3.svg" alt="" data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000">
+            <img src="assets/fontisto_css3.svg" alt="" data-aos="fade-up" data-aos-delay="120" data-aos-duration="6000" data-aos-anchor="top-center">
           </div>
           <div class="habilidades">
-            <img src="assets/akar-icons_javascript-fill.svg" alt="" data-aos="fade-up" data-aos-delay="160" data-aos-duration="8000">
+            <img src="assets/akar-icons_javascript-fill.svg" alt="" data-aos="fade-up" data-aos-delay="160" data-aos-duration="8000" data-aos-anchor="center-center">
           </div>
           <div class="habilidades">
-            <img src="assets/file-icons_tailwind.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="180" data-aos-duration="10000">
+            <img src="assets/file-icons_tailwind.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="180" data-aos-duration="10000" data-aos-anchor="top-center">
           </div>
         </div>
       </section>
       <!-- ----------------- -->
     </main>
-    <footer></footer>
+    <footer>
+      Portfólio feito por <a href="#">Kauã W3b</a>
+    </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   
     <script defer >
     document.addEventListener('DOMContentLoaded', function(){
@@ -171,8 +164,7 @@ responsivos
         once:false,
         mirror: true,
         duration: 3000,
-        makers: true, 
-
+        
       });
     });
      
