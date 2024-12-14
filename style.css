@@ -11,12 +11,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   background-color: #0b0b0b;
   color: white;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* ------------------------------- */
@@ -33,30 +35,46 @@ body {
   font-family: "Fira Code";
   margin: 40px auto 30px auto;
 }
+#ballBlur{
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(66, 66, 66, 0.216), #97edaa2c);
+  filter: blur(50px);
+  pointer-events: none;
+  box-shadow: 0px 0px 10px #fff ;
+}
+
 #header h1 {
   font-size: 24px;
   font-weight: 400;
   color: #97edaa;
-  animation: pulseText 6s ease-in-out     ;
+  animation: pulseText 6s ease-in-out;
 }
+
 @keyframes pulseText {
-    0% {
-      text-shadow: 0px 0px 0px #97edaa;
-    }
-    50% {
-      text-shadow: 0px 0px 30px #97edaa;
-    }
-    100% {
-      text-shadow: 0px 0px 0x #97edaa;
-    }
+  0% {
+    text-shadow: 0px 0px 0px #97edaa;
+  }
+
+  50% {
+    text-shadow: 0px 0px 30px #97edaa;
+  }
+
+  100% {
+    text-shadow: 0px 0px 0x #97edaa;
+  }
 }
+
 #header h1::before {
   content: "<";
 }
+
 #header h1::after {
   content: "/>";
 }
-#header nav > a {
+
+#header nav>a {
   text-decoration: none;
   color: white;
   display: inline;
@@ -67,15 +85,18 @@ body {
   letter-spacing: 2px;
   font-weight: 300;
 }
-#header nav > a:hover {
+
+#header nav>a:hover {
   color: #97edaa;
 }
+
 hr {
   width: 90%;
   border-radius: 2px;
   border: 2px solid #101010;
   margin: auto;
 }
+
 /* ----------------------------- */
 #principal-info {
   width: 70%;
@@ -87,6 +108,7 @@ hr {
   justify-content: center;
   gap: 20%;
 }
+
 #curriculo {
   display: flex;
   flex-direction: column;
@@ -95,15 +117,18 @@ hr {
   text-align: justify;
   line-height: 40px;
 }
+
 #curriculo h1 {
   font-size: 24px;
   font-weight: 500;
 }
+
 #curriculo h2 {
   font-size: 48px;
   font-weight: 400;
   color: #97edaa;
 }
+
 #curriculo button {
   color: #0b0b0b;
   background-color: #97edaa;
@@ -115,11 +140,13 @@ hr {
   cursor: pointer;
   border: none;
 }
+
 #about-me {
   width: 80%;
   margin: auto;
   text-align: center;
 }
+
 #about-me h1 {
   font-size: 32px;
   font-family: "Archivo";
@@ -127,12 +154,14 @@ hr {
   font-weight: 400;
   margin: 40px auto 40px;
 }
+
 #about-me p {
   font-family: "Archivo";
   font-size: 24px;
   line-height: 38px;
   font-weight: 400;
 }
+
 #contato {
   display: flex;
   justify-content: space-around;
@@ -143,21 +172,26 @@ hr {
   line-height: 32px;
   font-family: "Archivo";
 }
-#contato > div h2 {
+
+#contato>div h2 {
   font-weight: 400;
   font-size: 20px;
 }
-#contato > div p {
+
+#contato>div p {
   font-weight: 400;
   font-size: 18px;
 }
+
 #contato div {
   transition: 0.7s ease-in-out;
 }
+
 #contato div:hover {
   transform: scale(105%);
   filter: drop-shadow(0px 0px 10px #97edaa4d);
 }
+
 #main-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,11 +203,13 @@ hr {
   justify-content: center;
   font-family: "Archivo";
 }
-#main-content div > img {
+
+#main-content div>img {
   width: 550px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 #title-project {
   text-align: center;
   margin-top: 80px;
@@ -182,6 +218,7 @@ hr {
   font-size: 32px;
   font-weight: 400;
 }
+
 .project-card {
   width: 100%;
   max-width: 600px;
@@ -191,12 +228,15 @@ hr {
   border-radius: 20px;
   padding-bottom: 30px;
 }
+
 .project-card h1 {
   font-weight: 300;
 }
-.project-card > img {
+
+.project-card>img {
   width: 100%;
 }
+
 .project-description {
   margin-left: 20px;
   margin-top: 20px;
@@ -204,6 +244,7 @@ hr {
   font-weight: 300;
   letter-spacing: 3px;
 }
+
 .btn-project-card {
   display: flex;
   justify-content: space-around;
@@ -212,6 +253,7 @@ hr {
   gap: 50px;
   text-align: center;
 }
+
 .btn-project-card button {
   width: 200px;
   height: 37px;
@@ -226,18 +268,22 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 a {
   text-decoration: none;
   color: #0b0b0b;
   margin: 0%;
   padding: 0px;
 }
+
 #title-service {
   text-align: center;
 }
+
 button {
   cursor: pointer;
 }
+
 #title-service {
   color: #97edaa;
   font-family: "Archivo";
@@ -246,6 +292,7 @@ button {
   text-align: center;
   margin-bottom: 80px;
 }
+
 #servicos-div {
   width: 60%;
   display: flex;
@@ -256,10 +303,12 @@ button {
   gap: 40px;
   margin-bottom: 80px;
 }
+
 .servicos-card img {
   width: 56px;
   height: 56px;
 }
+
 .servicos-card {
   border-bottom: 1px solid #97edaa;
   width: 384px;
@@ -269,10 +318,12 @@ button {
   padding-bottom: 44px;
   font-family: "Archivo";
 }
+
 .servicos-card h2 {
   font-size: 32px;
   font-weight: 200;
 }
+
 #habilidades h1 {
   color: #97edaa;
   font-family: "Archivo";
@@ -282,30 +333,37 @@ button {
   font-weight: 400;
   display: block;
 }
+
 #habilidades {
   display: grid;
   width: 60%;
   margin: auto auto 80px auto;
 }
+
 #habilidades-card {
   display: flex;
   gap: 80px;
   align-items: center;
   justify-content: center;
 }
-.habilidades > img {
+
+.habilidades>img {
   width: 60px;
 }
+
 footer {
   font-size: 24px;
   text-align: center;
   padding-top: 60px;
+
   & {
     padding-bottom: 10px;
   }
+
   font-family: "Archivo";
   font-weight: 200;
 }
+
 footer a {
   text-decoration: none;
   color: #97edaa;
@@ -316,23 +374,28 @@ footer a {
   #header {
     width: 80%;
   }
+
   #header h1 {
     font-size: 30px;
     width: 20px;
     margin-left: 20px;
     animation: infinite pulseText 6s ease-in-out;
   }
+
   @keyframes pulseText {
     0% {
       text-shadow: 0px 0px 0px #97edaa;
     }
+
     50% {
       text-shadow: 0px 0px 30px #97edaa;
     }
+
     100% {
       text-shadow: 0px 0px 0x #97edaa;
     }
   }
+
   main {
     display: flex;
     flex-direction: column;
@@ -340,12 +403,14 @@ footer a {
     justify-content: center;
     align-items: center;
   }
+
   #principal-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   #curriculo {
     display: flex;
     justify-content: flex-start;
@@ -353,46 +418,56 @@ footer a {
     margin-left: -50px;
     text-align: left;
   }
-  #icon-content > img {
+
+  #icon-content>img {
     width: 300px;
     margin-left: -50px;
     margin-bottom: 50px;
   }
+
   #about-me {
     width: 300px;
     line-height: 0px;
   }
+
   #about-me h1 {
     text-align: left;
   }
+
   #about-me p {
     font-size: 24px;
     text-align: left;
   }
+
   #contato {
     display: grid;
     justify-content: center;
     align-content: center;
     gap: 0;
   }
-  #contato > div > p {
+
+  #contato>div>p {
     font-size: 16px;
     text-align: center;
   }
-  #contato > div > img {
+
+  #contato>div>img {
     margin-bottom: -20px;
     padding-top: 10px;
   }
+
   #main-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 50%;
   }
-  .project-card{
+
+  .project-card {
     width: 300px;
     max-width: 300px;
   }
-  .project-card > img {
+
+  .project-card>img {
     width: 300px;
     max-width: 300px;
     display: flex;
@@ -401,11 +476,13 @@ footer a {
     align-items: center;
     margin: auto;
   }
+
   .project-description {
     margin-left: 20px;
     font-size: 13px;
     letter-spacing: 1px;
   }
+
   .btn-project-card {
     display: flex;
     flex-direction: row;
@@ -413,357 +490,428 @@ footer a {
     align-items: flex-start;
     gap: 10px;
   }
+
   .btn-project-card button {
     width: 130px;
     font-size: 12px;
     font-weight: 600;
   }
+
   #servicos-div {
     display: flex;
     flex-direction: column;
     gap: 120px;
   }
-  #servicos-div > div {
+
+  #servicos-div>div {
     width: 250px;
   }
+
   #habilidades-card {
     display: flex;
     flex-direction: column;
   }
+
   footer {
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 393px) {
   #header {
     width: 50%;
   }
-  #header h1{
+
+  #header h1 {
     text-align: left;
     justify-content: center;
     font-size: 30px;
     margin-left: -40px;
   }
-  #principal-info{
+
+  #principal-info {
     display: flex;
     flex-direction: column;
   }
-  #about-me{
+
+  #about-me {
     text-align: left;
   }
-  #contato{
+
+  #contato {
     display: flex;
     flex-direction: column;
-}
-#contato div{
+  }
+
+  #contato div {
     margin-bottom: 20px;
     line-height: 20px;
-}
-#main-content{
+  }
+
+  #main-content {
     display: flex;
     flex-direction: column;
     width: 350px;
     justify-content: center;
 
-}
-.project-card{
+  }
+
+  .project-card {
     width: 330px;
     max-width: 360px;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;   
-}
+    align-items: flex-start;
+  }
 
-.project-card img{
+  .project-card img {
     max-width: 330px;
-}
-.project-description{
+  }
+
+  .project-description {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-}
-.btn-project-card{
+  }
+
+  .btn-project-card {
     width: 100%;
     display: flex;
 
-}
-.btn-project-card p{
+  }
+
+  .btn-project-card p {
     font-weight: 700;
-}
-#servicos{
+  }
+
+  #servicos {
     display: flex;
     flex-direction: column;
     width: 350px;
     margin: auto;
     padding-bottom: 80px;
-}
-#servicos div{display: flex;
+  }
+
+  #servicos div {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     width: 300px;
-}
-#habilidades-card{
-    display:flex;
+  }
+
+  #habilidades-card {
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-footer{ 
+  }
+
+  footer {
     padding-bottom: 30px;
+  }
 }
-}
+
 @media screen and (max-width: 412px) {
-    #header {
-        width: 50%;
-      }
-      #header h1{
-        text-align: left;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: -40px;
-      }
-      #principal-info{
-        display: flex;
-        flex-direction: column;
-      }
-      #about-me{
-        text-align: left;
-      }
-      #contato{
-        display: flex;
-        flex-direction: column;
-    }
-    #contato div{
-        margin-bottom: 20px;
-        line-height: 20px;
-    }
-    #main-content{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        justify-content: center;
-    
-    }
-    .project-card{
-        width: 330px;
-        max-width: 360px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;   
-    }
-    
-    .project-card img{
-        max-width: 330px;
-    }
-    .project-description{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .btn-project-card{
-        width: 100%;
-        display: flex;
-    
-    }
-    .btn-project-card p{
-        font-weight: 700;
-    }
-    #servicos{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        margin: auto;
-        padding-bottom: 80px;
-    }
-    #servicos div{display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
-        width: 300px;
-    }
-    #habilidades-card{
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer{ 
-        padding-bottom: 30px;
-    }
-} 
+  #header {
+    width: 50%;
+  }
+
+  #header h1 {
+    text-align: left;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -40px;
+  }
+
+  #principal-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me {
+    text-align: left;
+  }
+
+  #contato {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contato div {
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+
+  }
+
+  .project-card {
+    width: 330px;
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .project-card img {
+    max-width: 330px;
+  }
+
+  .project-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-project-card {
+    width: 100%;
+    display: flex;
+
+  }
+
+  .btn-project-card p {
+    font-weight: 700;
+  }
+
+  #servicos {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+    padding-bottom: 80px;
+  }
+
+  #servicos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  #habilidades-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 320px) {
-    #servicos-div{
-        padding-bottom: 500px;
-        padding-top: -150px;
-    }
-    #habilidades{
-        margin-top: -500px;
-    }
+  #servicos-div {
+    padding-bottom: 500px;
+    padding-top: -150px;
+  }
+
+  #habilidades {
+    margin-top: -500px;
+  }
 }
+
 @media screen and (max-width: 415px) {
-    #header {
-        width: 50%;
-      }
-      #header h1{
-        text-align: left;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: -40px;
-      }
-      #principal-info{
-        display: flex;
-        flex-direction: column;
-      }
-      #about-me{
-        text-align: left;
-      }
-      #contato{
-        display: flex;
-        flex-direction: column;
-    }
-    #contato div{
-        margin-bottom: 20px;
-        line-height: 20px;
-    }
-    #main-content{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        justify-content: center;
-    
-    }
-    .project-card{
-        width: 330px;
-        max-width: 360px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;   
-    }
-    
-    .project-card img{
-        max-width: 330px;
-    }
-    .project-description{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .btn-project-card{
-        width: 100%;
-        display: flex;
-    
-    }
-    .btn-project-card p{
-        font-weight: 700;
-    }
-    #servicos{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        margin: auto;
-        padding-bottom: 80px;
-    }
-    #servicos div{display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
-        width: 300px;
-    }
-    #habilidades-card{
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer{ 
-        padding-bottom: 30px;
-    }
+  #header {
+    width: 50%;
+  }
+
+  #header h1 {
+    text-align: left;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -40px;
+  }
+
+  #principal-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me {
+    text-align: left;
+  }
+
+  #contato {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contato div {
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+
+  }
+
+  .project-card {
+    width: 330px;
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .project-card img {
+    max-width: 330px;
+  }
+
+  .project-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-project-card {
+    width: 100%;
+    display: flex;
+
+  }
+
+  .btn-project-card p {
+    font-weight: 700;
+  }
+
+  #servicos {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+    padding-bottom: 80px;
+  }
+
+  #servicos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  #habilidades-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
 }
+
 @media screen and (max-width: 429px) {
-    #header {
-        width: 50%;
-      }
-      #header h1{
-        text-align: left;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: -40px;
-      }
-      #principal-info{
-        display: flex;
-        flex-direction: column;
-      }
-      #about-me{
-        text-align: left;
-      }
-      #contato{
-        display: flex;
-        flex-direction: column;
-    }
-    #contato div{
-        margin-bottom: 20px;
-        line-height: 20px;
-    }
-    #main-content{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        justify-content: center;
-    
-    }
-    .project-card{
-        width: 330px;
-        max-width: 360px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;   
-    }
-    
-    .project-card img{
-        max-width: 330px;
-    }
-    .project-description{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .btn-project-card{
-        width: 100%;
-        display: flex;
-    
-    }
-    .btn-project-card p{
-        font-weight: 700;
-    }
-    #servicos{
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        margin: auto;
-        padding-bottom: 80px;
-    }
-    #servicos div{display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
-        width: 300px;
-    }
-    #habilidades-card{
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer{ 
-        padding-bottom: 30px;
-    }
+  #header {
+    width: 50%;
+  }
+
+  #header h1 {
+    text-align: left;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -40px;
+  }
+
+  #principal-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me {
+    text-align: left;
+  }
+
+  #contato {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contato div {
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+
+  }
+
+  .project-card {
+    width: 330px;
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .project-card img {
+    max-width: 330px;
+  }
+
+  .project-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-project-card {
+    width: 100%;
+    display: flex;
+
+  }
+
+  .btn-project-card p {
+    font-weight: 700;
+  }
+
+  #servicos {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+    padding-bottom: 80px;
+  }
+
+  #servicos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  #habilidades-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
 }
